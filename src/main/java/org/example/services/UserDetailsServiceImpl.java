@@ -3,6 +3,7 @@ package org.example.services;
 import java.util.Optional;
 import org.example.domain.Pessoa;
 import org.example.repositories.PessoaRepository;
+import org.example.security.UserSS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
