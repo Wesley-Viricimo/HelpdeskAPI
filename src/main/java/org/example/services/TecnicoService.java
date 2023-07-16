@@ -2,9 +2,7 @@ package org.example.services;
 
 import java.util.List;
 import java.util.Optional;
-
 import javax.validation.Valid;
-
 import org.example.domain.Pessoa;
 import org.example.domain.Tecnico;
 import org.example.domain.dtos.TecnicoDTO;

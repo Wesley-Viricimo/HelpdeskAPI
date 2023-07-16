@@ -3,9 +3,7 @@ package org.example.services;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
 import javax.validation.Valid;
-
 import org.example.domain.Chamado;
 import org.example.domain.Cliente;
 import org.example.domain.Tecnico;

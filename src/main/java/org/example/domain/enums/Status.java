@@ -26,12 +26,12 @@ public enum Status {
             return null;
         }
 
-        for(Status x : Status.values()) {
-            if(cod.equals(x.getCodigo())) {
-                return x;
+        for(Status status : Status.values()) {
+            if(cod.equals(status.getCodigo())) {
+                return status;
             }
         }
-
         throw new IllegalArgumentException("Status Inválido!");
     }
+
 }
