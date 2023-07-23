@@ -50,7 +50,7 @@ public class ClienteService {
         if(!objDTO.getSenha().equals(oldObj.getSenha())) { //Se a senha que o usuário informar na atualização não for igual a que está salva
             objDTO.setSenha(encoder.encode(objDTO.getSenha()));
         }
-        
+
         validaPorCpfEEmail(objDTO);//Validar se o CPF ou Email que estão sendo informados já existem
         oldObj = new Cliente(objDTO);//Se não existir, criar um novo objeto com as novas informações que foram passadas
         return repository.save(oldObj);//Salvar estas novas informações
