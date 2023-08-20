@@ -15,13 +15,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
-
+import lombok.Getter;
+import lombok.Setter;
 import org.example.domain.enums.Perfil;
 import org.hibernate.validator.constraints.br.CPF;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 //Classe abstrata significa que não poderá ser criadas instâncias dessa classe.
+@Getter
+@Setter
 @Entity(name="T_PESSOA")  //Informando ao JPA que a classe pessoa é uma entidade e deverá ser ciada uma tabela para ela no banco de dados
 public abstract class Pessoa implements Serializable {
 
@@ -69,46 +72,6 @@ public abstract class Pessoa implements Serializable {
         this.senha = senha;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
     public Set<Perfil> getPerfis() {
         //Chamada do método que irá verificar se o perfil informado existe e se existir irá retornar, coletar e converter para uma lista do tipo set
         return perfis.stream().map(cod -> Perfil.toEnum(cod)).collect(Collectors.toSet());
@@ -116,14 +79,6 @@ public abstract class Pessoa implements Serializable {
 
     public void addPerfil(Perfil perfil) {
         this.perfis.add(perfil.getCodigo());
-    }
-
-    public LocalDate getDataCriacao() {
-        return dataCriacao;
-    }
-
-    public void setDataCriacao(LocalDate dataCriacao) {
-        this.dataCriacao = dataCriacao;
     }
 
     @Override

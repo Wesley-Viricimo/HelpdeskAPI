@@ -6,9 +6,13 @@ import java.util.stream.Collectors;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.domain.dtos.TecnicoDTO;
 import org.example.domain.enums.Perfil;
 
+@Getter
+@Setter
 @Entity(name="T_TECNICO")
 public class Tecnico extends Pessoa {
     private static final long serialVersionUID = 1L;
@@ -38,14 +42,6 @@ public class Tecnico extends Pessoa {
         super(id, nome, cpf, email, senha);
         addPerfil(Perfil.TECNICO);//Sempre que um tecnico for adicionado será adicionado o perfil tecnico ao mesmo
         addPerfil(Perfil.ADMIN);//Sempre que um tecnico for adicionado será adicionado o perfil admin ao mesmo
-    }
-
-    public List<Chamado> getChamados() {
-        return chamados;
-    }
-
-    public void setChamados(List<Chamado> chamados) {
-        this.chamados = chamados;
     }
 
 }

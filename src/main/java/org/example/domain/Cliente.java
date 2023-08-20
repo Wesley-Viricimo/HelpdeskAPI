@@ -6,9 +6,13 @@ import java.util.stream.Collectors;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
 import org.example.domain.dtos.ClienteDTO;
 import org.example.domain.enums.Perfil;
 
+@Getter
+@Setter
 @Entity(name="T_CLIENTE")
 public class Cliente extends Pessoa {
 
@@ -38,14 +42,6 @@ public class Cliente extends Pessoa {
     public Cliente(Integer id, String nome, String cpf, String email, String senha) {
         super(id, nome, cpf, email, senha);
         addPerfil(Perfil.CLIENTE);
-    }
-
-    public List<Chamado> getChamados() {
-        return chamados;
-    }
-
-    public void setChamados(List<Chamado> chamados) {
-        this.chamados = chamados;
     }
 
 }
