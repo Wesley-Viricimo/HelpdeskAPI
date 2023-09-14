@@ -5,7 +5,6 @@ import javax.validation.ConstraintViolationException;
 
 import org.example.services.exceptions.DataIntegrityViolationException;
 import org.example.services.exceptions.ObjectNotFoundException;
-import org.example.services.exceptions.BadCredentialsException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -63,14 +62,6 @@ public class ResourceExceptionHandler {
         }
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
-    }
-
-    @ExceptionHandler(BadCredentialsException.class)
-    public ResponseEntity<StandardError> badCredentialsException(BadCredentialsException ex, HttpServletRequest request) {
-
-        StandardError error = new StandardError(System.currentTimeMillis(), HttpStatus.UNAUTHORIZED.value(), "Não encontrado na base de dados!", ex.getMessage(), request.getRequestURI());
-
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
     }
 }
 
