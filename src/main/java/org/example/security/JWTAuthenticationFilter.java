@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.example.domain.dtos.CredenciaisDTO;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -35,7 +36,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             Authentication authentication = authenticationManager.authenticate(authenticationToken);//Instanciando objeto authentication e passando o authenticationToken como argumento
             return authentication;
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new BadCredentialsException("Usuário não cadastrado no sistema!");
         }
     }
 
@@ -63,7 +64,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 + "\"timestamp\": " + date + ", "
                 + "\"status\":  401, "
                 + "\"error\": \"Não autorizado\", "
-                + "\"message\": \"Email ou senha inválidos\", "
+                + "\"message\": \"Usuário não cadastrado no sistema!\", "
                 + "\"path\": \"/login\"}";
     }
 }
