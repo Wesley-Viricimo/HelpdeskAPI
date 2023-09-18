@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.Arrays;
 
 @Service
@@ -61,9 +62,9 @@ public class DBService {
         Chamado c7 = new Chamado(null, Prioridade.MEDIA, Status.ABERTO, "Título chamado teste 07", "Observações de teste do setimo chamado", tec7, cli8);
         Chamado c8 = new Chamado(null, Prioridade.MEDIA, Status.ABERTO, "Título chamado teste 08", "Observações de teste do oitavo chamado", tec8, cli8);
         Chamado c9 = new Chamado(null, Prioridade.MEDIA, Status.ABERTO, "Título chamado teste 09", "Observações de teste do nono chamado", tec9, cli1);
-        Chamado c10 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Título chamado teste 10", "Observações de teste do decimo chamado", tec10, cli2);
-        Chamado c11 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Título chamado teste 11", "Observações de teste do decimo primeiro chamado", tec11, cli3);
-        Chamado c12 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Título chamado teste 12", "Observações de teste do decimo segundo chamado", tec12, cli4);
+        Chamado c10 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Título chamado teste 10", "Observações de teste do decimo chamado", tec10, cli2, LocalDate.now());
+        Chamado c11 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Título chamado teste 11", "Observações de teste do decimo primeiro chamado", tec11, cli3, LocalDate.now());
+        Chamado c12 = new Chamado(null, Prioridade.BAIXA, Status.ENCERRADO, "Título chamado teste 12", "Observações de teste do decimo segundo chamado", tec12, cli4, LocalDate.now());
 
 
         tecnicoRepository.saveAll(Arrays.asList(tec1, tec2, tec3, tec4, tec5, tec6, tec7, tec8, tec9, tec10, tec11, tec12));

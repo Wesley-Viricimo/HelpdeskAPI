@@ -66,6 +66,19 @@ public class Chamado implements Serializable{
         this.cliente = cliente;
     }
 
+    public Chamado(Integer id, Prioridade prioridade, Status status, String titulo, String observacoes, Tecnico tecnico,
+                   Cliente cliente, LocalDate dataFechamento ) {
+        super();
+        this.id = id;
+        this.prioridade = prioridade;
+        this.status = status;
+        this.titulo = titulo;
+        this.observacoes = observacoes;
+        this.tecnico = tecnico;
+        this.cliente = cliente;
+        this.dataFechamento = dataFechamento;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hash(id);
