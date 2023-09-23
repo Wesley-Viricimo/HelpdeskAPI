@@ -17,6 +17,27 @@ import java.util.Arrays;
 
 @Service
 public class DBService {
+    private String fotoPessoa = "https://wl-incrivel.cf.tsp.li/resize/728x/jpg/805/57a/7337b758ba825025d94ceaf9dc.jpg";
+    private String fotoPessoa1 = "https://i0.wp.com/engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia360-4.png?resize=791%2C785&ssl=1";
+    private String fotoPessoa2 = "https://dentistaubatuba.com.br/wp-content/uploads/2021/06/o-que-as-pessoas-bonitas-tem-em-comum-2.jpg";
+    private String fotoPessoa3 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/site-vacinacao-26-anos.png";
+    private String fotoPessoa4 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/ed5d55c8-3966-4114-8ce4-9b9d0d25effd.png";
+    private String fotoPessoa5 = "https://img.ibxk.com.br/2019/02/17/17124052466014.jpg?ims=328x";
+    private String fotoPessoa6 = "https://vocerh.abril.com.br/wp-content/uploads/2022/06/Eduardo_Alves.jpg?quality=70&strip=info&w=1280&h=720&crop=1";
+    private String fotoPessoa7 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/07/site-vacinacao-38-anos-2.png";
+    private String fotoPessoa8 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/07/site-vacinacao-38-anos-1.png";
+    private String fotoPessoa9 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/07/site-vacinacao-36-anos.png";
+    private String fotoPessoa10 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/07/site_vacinacao_34_anos.png";
+    private String fotoPessoa11 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/08/site-vacinacao-28-anos.png";
+    private String fotoPessoa12 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/07/75833718-f68b-4cf8-9f3d-70c70d18f2b6.png";
+    private String fotoPessoa13 = "https://cdn.diariodolitoral.com.br/upload/dn_noticia/2017/11/papo-de-domingo-divulgacao.jpg";
+    private String fotoPessoa14 = "https://cajamar.sp.gov.br/noticias/wp-content/uploads/sites/2/2021/07/site-vacinacao-33-anos.png";
+    private String fotoPessoa15 = "https://www.agendartecultura.com.br/wp-content/uploads/2022/12/meneson.jpg";
+    private String fotoPessoa16 = "https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg";
+    private String fotoPessoa17 = "https://osegredo.com.br/wp-content/uploads/2017/09/O-que-as-pessoas-felizes-t%C3%AAm-em-comum-site.jpg";
+    private String fotoPessoa18 = "https://i0.wp.com/engenharia360.com/wp-content/uploads/2019/05/esta-pessoa-nao-existe-engenharia-360-2.png?resize=791%2C783&ssl=1";
+    private String fotoPessoa19 = "https://wl-incrivel.cf.tsp.li/resize/728x/jpg/a98/367/8abd5c598bad7f16b2e3eb9f40.jpg";
+    private String fotoPessoa20 = "https://wl-incrivel.cf.tsp.li/resize/728x/jpg/998/af8/8012d855ecac748fdf628d682d.jpg";
 
     //Injetando dependências das interfaces criadas
     @Autowired
@@ -31,18 +52,18 @@ public class DBService {
 
 
     public void instanciaDB() {
-        Tecnico tec1 = new Tecnico(null, "Tecnico teste 01", "28598547034", "tec1@mail.com", encoder.encode("1234"));
-        Tecnico tec2 = new Tecnico(null, "Tecnico teste 02", "85119890059", "tec2@mail.com", encoder.encode("1234"));
-        Tecnico tec3 = new Tecnico(null, "Tecnico teste 03", "28900297007", "tec3@mail.com", encoder.encode("1234"));
-        Tecnico tec4 = new Tecnico(null, "Tecnico teste 04", "74737545058", "tec4@mail.com", encoder.encode("1234"));
-        Tecnico tec5 = new Tecnico(null, "Tecnico teste 05", "67229960002", "tec5@mail.com", encoder.encode("1234"));
-        Tecnico tec6 = new Tecnico(null, "Tecnico teste 06", "45026134017", "tec6@mail.com", encoder.encode("1234"));
-        Tecnico tec7 = new Tecnico(null, "Tecnico teste 07", "23678151000", "tec7@mail.com", encoder.encode("1234"));
-        Tecnico tec8 = new Tecnico(null, "Tecnico teste 08", "23130649050", "tec8@mail.com", encoder.encode("1234"));
-        Tecnico tec9 = new Tecnico(null, "Tecnico teste 09", "62373584042", "tec9@mail.com", encoder.encode("1234"));
-        Tecnico tec10 = new Tecnico(null,"Tecnico teste 10", "37486330091", "tec10@mail.com", encoder.encode("1234"));
-        Tecnico tec11 = new Tecnico(null,"Tecnico teste 11", "96428734001", "tec11@mail.com", encoder.encode("1234"));
-        Tecnico tec12 = new Tecnico(null,"Tecnico teste 12", "78854125040", "tec12@mail.com", encoder.encode("1234"));
+        Tecnico tec1 = new Tecnico(null, "Tecnico teste 01", "28598547034", "tec1@mail.com", encoder.encode("1234"), fotoPessoa);
+        Tecnico tec2 = new Tecnico(null, "Tecnico teste 02", "85119890059", "tec2@mail.com", encoder.encode("1234"), fotoPessoa1);
+        Tecnico tec3 = new Tecnico(null, "Tecnico teste 03", "28900297007", "tec3@mail.com", encoder.encode("1234"), fotoPessoa2);
+        Tecnico tec4 = new Tecnico(null, "Tecnico teste 04", "74737545058", "tec4@mail.com", encoder.encode("1234"), fotoPessoa3);
+        Tecnico tec5 = new Tecnico(null, "Tecnico teste 05", "67229960002", "tec5@mail.com", encoder.encode("1234"), fotoPessoa4);
+        Tecnico tec6 = new Tecnico(null, "Tecnico teste 06", "45026134017", "tec6@mail.com", encoder.encode("1234"), fotoPessoa5);
+        Tecnico tec7 = new Tecnico(null, "Tecnico teste 07", "23678151000", "tec7@mail.com", encoder.encode("1234"), fotoPessoa6);
+        Tecnico tec8 = new Tecnico(null, "Tecnico teste 08", "23130649050", "tec8@mail.com", encoder.encode("1234"), fotoPessoa7);
+        Tecnico tec9 = new Tecnico(null, "Tecnico teste 09", "62373584042", "tec9@mail.com", encoder.encode("1234"), fotoPessoa8);
+        Tecnico tec10 = new Tecnico(null,"Tecnico teste 10", "37486330091", "tec10@mail.com", encoder.encode("1234"), fotoPessoa9);
+        Tecnico tec11 = new Tecnico(null,"Tecnico teste 11", "96428734001", "tec11@mail.com", encoder.encode("1234"), fotoPessoa10);
+        Tecnico tec12 = new Tecnico(null,"Tecnico teste 12", "78854125040", "tec12@mail.com", encoder.encode("1234"), fotoPessoa11);
 
         Cliente cli1 = new Cliente(null, "Cliente teste 01", "08729083052", "cli1@mail.com", encoder.encode("1234"));
         Cliente cli2 = new Cliente(null, "Cliente teste 02", "98946201088", "cli2@mail.com", encoder.encode("1234"));

@@ -57,6 +57,8 @@ public abstract class Pessoa implements Serializable {
     @JsonFormat(pattern = "dd/MM/yyyy")//Definindo o padrão de data que será salvo no banco de dados
     protected LocalDate dataCriacao = LocalDate.now();//Método pega a data atual onde a intância do objeto foi criada
 
+    protected String fotoPerfil;
+
     //Construtor da super classe, sem os parâmetros para criar um objeto da classe sem atribuir valor a ele
     public Pessoa() {
         super();
@@ -70,6 +72,16 @@ public abstract class Pessoa implements Serializable {
         this.cpf = cpf;
         this.email = email;
         this.senha = senha;
+    }
+
+    public Pessoa(Integer id, String nome, String cpf, String email, String senha, String fotoPerfil) {
+        super();
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.senha = senha;
+        this.fotoPerfil = fotoPerfil;
     }
 
     public Set<Perfil> getPerfis() {
