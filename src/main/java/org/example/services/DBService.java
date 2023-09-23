@@ -65,14 +65,15 @@ public class DBService {
         Tecnico tec11 = new Tecnico(null,"Tecnico teste 11", "96428734001", "tec11@mail.com", encoder.encode("1234"), fotoPessoa10);
         Tecnico tec12 = new Tecnico(null,"Tecnico teste 12", "78854125040", "tec12@mail.com", encoder.encode("1234"), fotoPessoa11);
 
-        Cliente cli1 = new Cliente(null, "Cliente teste 01", "08729083052", "cli1@mail.com", encoder.encode("1234"));
-        Cliente cli2 = new Cliente(null, "Cliente teste 02", "98946201088", "cli2@mail.com", encoder.encode("1234"));
-        Cliente cli3 = new Cliente(null, "Cliente teste 03", "65180638070", "cli3@mail.com", encoder.encode("1234"));
-        Cliente cli4 = new Cliente(null, "Cliente teste 04", "30064498000", "cli4@mail.com", encoder.encode("1234"));
-        Cliente cli5 = new Cliente(null, "Cliente teste 05", "69402303006", "cli5@mail.com", encoder.encode("1234"));
-        Cliente cli6 = new Cliente(null, "Cliente teste 06", "57025436020", "cli6@mail.com", encoder.encode("1234"));
-        Cliente cli7 = new Cliente(null, "Cliente teste 07", "31817221035", "cli7@mail.com", encoder.encode("1234"));
-        Cliente cli8 = new Cliente(null, "Cliente teste 08", "25563371093", "cli8@mail.com", encoder.encode("1234"));
+        Cliente cli1 = new Cliente(null, "Cliente teste 01", "08729083052", "cli1@mail.com", encoder.encode("1234"), fotoPessoa12);
+        Cliente cli2 = new Cliente(null, "Cliente teste 02", "98946201088", "cli2@mail.com", encoder.encode("1234"), fotoPessoa13);
+        Cliente cli3 = new Cliente(null, "Cliente teste 03", "65180638070", "cli3@mail.com", encoder.encode("1234"), fotoPessoa14);
+        Cliente cli4 = new Cliente(null, "Cliente teste 04", "30064498000", "cli4@mail.com", encoder.encode("1234"), fotoPessoa15);
+        Cliente cli5 = new Cliente(null, "Cliente teste 05", "69402303006", "cli5@mail.com", encoder.encode("1234"), fotoPessoa16);
+        Cliente cli6 = new Cliente(null, "Cliente teste 06", "57025436020", "cli6@mail.com", encoder.encode("1234"), fotoPessoa17);
+        Cliente cli7 = new Cliente(null, "Cliente teste 07", "31817221035", "cli7@mail.com", encoder.encode("1234"), fotoPessoa18);
+        Cliente cli8 = new Cliente(null, "Cliente teste 08", "25563371093", "cli8@mail.com", encoder.encode("1234"), fotoPessoa19);
+        Cliente cli9 = new Cliente(null, "Cliente teste 09", "93537556039", "cli9@mail.com", encoder.encode("1234"), fotoPessoa20);
 
         Chamado c1 = new Chamado(null, Prioridade.ALTA, Status.ANDAMENTO, "Título chamado teste 01", "Observações de teste do primeiro chamado", tec1, cli2);
         Chamado c2 = new Chamado(null, Prioridade.ALTA, Status.ANDAMENTO, "Título chamado teste 02", "Observações de teste do segundo chamado", tec2, cli3);
@@ -89,7 +90,7 @@ public class DBService {
 
 
         tecnicoRepository.saveAll(Arrays.asList(tec1, tec2, tec3, tec4, tec5, tec6, tec7, tec8, tec9, tec10, tec11, tec12));
-        clienteRepository.saveAll(Arrays.asList(cli1, cli2, cli3, cli4, cli5, cli6, cli7, cli8));
+        clienteRepository.saveAll(Arrays.asList(cli1, cli2, cli3, cli4, cli5, cli6, cli7, cli8, cli9));
         chamadoRepository.saveAll(Arrays.asList(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12));
     }
 }
