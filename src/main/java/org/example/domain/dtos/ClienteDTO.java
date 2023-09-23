@@ -30,6 +30,7 @@ public class ClienteDTO implements Serializable {
 
     @JsonFormat(pattern = "dd/MM/yyyy") // Definindo o padrão de data que será salvo no banco de dados
     protected LocalDate dataCriacao = LocalDate.now();// Método pega a data atual onde a intância do objeto foi criada
+    protected String fotoPerfil;
 
     public ClienteDTO() {
         super();
@@ -45,6 +46,7 @@ public class ClienteDTO implements Serializable {
         this.senha = obj.getSenha();
         this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
         this.dataCriacao = obj.getDataCriacao();
+        this.fotoPerfil = obj.getFotoPerfil();
     }
 
     public Set<Perfil> getPerfis() {

@@ -44,5 +44,11 @@ public class Tecnico extends Pessoa {
         addPerfil(Perfil.ADMIN);//Sempre que um tecnico for adicionado será adicionado o perfil admin ao mesmo
     }
 
+    public Tecnico(Integer id, String nome, String cpf, String email, String senha, String fotoPerfil) {
+        super(id, nome, cpf, email, senha, fotoPerfil);
+        addPerfil(Perfil.TECNICO);//Sempre que um tecnico for adicionado será adicionado o perfil tecnico ao mesmo
+        addPerfil(Perfil.ADMIN);//Sempre que um tecnico for adicionado será adicionado o perfil admin ao mesmo
+    }
+
 }
 
